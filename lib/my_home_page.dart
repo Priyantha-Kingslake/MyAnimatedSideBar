@@ -131,15 +131,14 @@ class _MyHomePageState extends State<MyHomePage> {
         return const Users();
       case 4:
         return const Roles();
-        case 5:
+      case 5:
         return const Permissions();
-        case 6:
+      case 6:
         return const Integrations();
-        case 7:
+      case 7:
         return const Settings();
-      default:{
+      default:
         return const NotFound();
-      }
     }
   }
 }
