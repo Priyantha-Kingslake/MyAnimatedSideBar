@@ -1,5 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:animated_sidebar/animated_sidebar.dart';
+import 'package:my_animated_sidebar/pages/integrations.dart';
+import 'package:my_animated_sidebar/pages/management.dart';
+import 'package:my_animated_sidebar/pages/not_found.dart';
+import 'package:my_animated_sidebar/pages/notifications.dart';
+import 'package:my_animated_sidebar/pages/permissions.dart';
+import 'package:my_animated_sidebar/pages/roles.dart';
+import 'package:my_animated_sidebar/pages/settings.dart';
+import 'package:my_animated_sidebar/pages/users.dart';
+
+import 'pages/home.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -112,65 +122,23 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _buildPage(int idx) {
     switch (idx) {
       case 0:
-        return Container(
-          color: Colors.red,
-          child: const Center(
-            child: Text("Home"),
-          ),
-        );
+        return const Home();
       case 1:
-        return Container(
-          color: Colors.yellow,
-          child: const Center(
-            child: Text("Notifications"),
-          ),
-        );
+        return const Notifications();
       case 2:
-        return Container(
-          color: const Color.fromARGB(255, 26, 204, 64),
-          child: const Center(
-            child: Text("Management"),
-          ),
-        );
+        return const Management();
       case 3:
-        return Container(
-          color: const Color.fromARGB(255, 74, 120, 227),
-          child: const Center(
-            child: Text("Users"),
-          ),
-        );
+        return const Users();
       case 4:
-        return Container(
-          color: const Color.fromARGB(255, 147, 190, 156),
-          child: const Center(
-            child: Text("Roles"),
-          ),
-        );
+        return const Roles();
         case 5:
-        return Container(
-          color: const Color.fromARGB(255, 219, 64, 188),
-          child: const Center(
-            child: Text("Permissions"),
-          ),
-        );
+        return const Permissions();
         case 6:
-        return Container(
-          color: const Color.fromARGB(255, 64, 102, 72),
-          child: const Center(
-            child: Text("Integrations"),
-          ),
-        );
+        return const Integrations();
         case 7:
-        return Container(
-          color: const Color.fromARGB(255, 28, 64, 183),
-          child: const Center(
-            child: Text("Settings"),
-          ),
-        );
+        return const Settings();
       default:{
-        return Container(
-          color: Colors.blue,
-        );
+        return const NotFound();
       }
     }
   }
